@@ -1,0 +1,27 @@
+{
+    "name": "devzkhalil/laravel-trovit-xml-feed",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Devzkhalil\\TrovitXmlFeed\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "devzkhalil",
+            "email": "devzkhalil@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Test": "Devzkhalil\\TrovitXmlFeed\\Facades\\TrovitXmlFeed"
+            },
+            "providers": [
+                "Devzkhalil\\TrovitXmlFeed\\TrovitXmlFeedServiceProvider"
+            ]
+        }
+    }
+}
