@@ -10,7 +10,7 @@ Laravel Trovit XML Feed Generator is a package designed to help you easily creat
 1.**Install the package via Composer:**
 
 ```bash
-composer require devzkhalil/laravel-trovit-xml-feed
+composer require devzkhalil/laravel-trovit-xml-feed:@dev
 ```
 2.**Publish the configuration file:**
 

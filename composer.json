@@ -1,5 +1,14 @@
 {
     "name": "devzkhalil/laravel-trovit-xml-feed",
+    "description": "Laravel Trovit XML Feed Generator is a package designed to help you easily create XML feeds for Trovit from your Laravel application's data.",
+    "keywords": [
+        "xml-feed",
+        "trovit",
+        "trovit-xml-feed",
+        "laravel-trovit-xml-feed-generator",
+        "laravel-trovit-xml-feed",
+        "php-trovit-xml-feed-generator"
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
