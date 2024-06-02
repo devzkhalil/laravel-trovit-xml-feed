@@ -83,13 +83,13 @@ To generate a Trovit XML feed, fetch the data from your model and call the **gen
 
 ```php
 use App\Models\Post;
-use Devzkhalil\TrovitXmlFeed\TrovitXmlFeed;
+use Devzkhalil\TrovitXmlFeed\Facades\TrovitXmlFeed;
 
 public function generateTrovitFeed()
 {
     $posts = Post::latest()->select(['id', 'title', 'post_url', 'content'])->take(100)->get();
 
-    $feed = (new TrovitXmlFeed())->generate($posts, 'trovit-feed');
+    $feed = TrovitXmlFeed::generate($posts, 'trovit-feed');
 
     if ($feed['status']) {
         return response()->json(['message' => 'Feed generated successfully'], 200);
@@ -111,8 +111,8 @@ Here's a complete example of a controller method that generates the Trovit XML f
 namespace App\Http\Controllers;
 
 use App\Models\Post;
-use Devzkhalil\TrovitXmlFeed\TrovitXmlFeed;
 use Illuminate\Http\JsonResponse;
+use Devzkhalil\TrovitXmlFeed\Facades\TrovitXmlFeed;
 
 class FeedController extends Controller
 {
@@ -125,7 +125,7 @@ class FeedController extends Controller
     {
         $posts = Post::latest()->select(['id', 'title', 'post_url', 'content'])->take(100)->get();
 
-        $feed = (new TrovitXmlFeed())->generate($posts, 'trovit-feed');
+        $feed = TrovitXmlFeed::generate($posts, 'trovit-feed');
 
         if ($feed['status']) {
             return response()->json(['message' => 'Feed generated successfully'], 200);
